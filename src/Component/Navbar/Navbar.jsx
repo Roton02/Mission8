@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './navbar.css'
 
 const Navbar = () => {
@@ -26,17 +26,17 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-      <NavLink className="btn btn-ghost hover:bg-black hover:text-white ">Home</NavLink>
-      <NavLink className="btn btn-ghost hover:bg-black hover:text-white">Listed Books</NavLink>s
-      <NavLink className="btn btn-ghost hover:bg-black hover:text-white">Pages to Read</NavLink>
+      <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
+      <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>s
+      <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
           </div>
         </div>
-        <a className="btn btn-ghost text-2xl font-bold">Book Vibe</a>
+        <Link to='/' className="btn btn-ghost text-2xl font-bold">Book Vibe</Link>
       </div>
       <div className="navbar-center hidden space-x-2  lg:flex">
-      <NavLink to='' className="btn btn-ghost hover:bg-black hover:text-white ">Home</NavLink>
-      <NavLink to='' className="btn btn-ghost hover:bg-black hover:text-white">Listed Books</NavLink>
-      <NavLink to='' className="btn btn-ghost hover:bg-black hover:text-white">Pages to Read</NavLink>
+      <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
+      <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>
+      <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
      
       </div>
       <div className="navbar-end ">
