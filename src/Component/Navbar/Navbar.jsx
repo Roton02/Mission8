@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import './navbar.css'
 
+
 const Navbar = () => {
+  
   return (
     <nav className="navbar bg-base-100">
       <div className="navbar-start">

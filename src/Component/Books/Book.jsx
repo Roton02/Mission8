@@ -5,7 +5,7 @@ const Book = ({ book }) => {
   // console.log(book);
   const { tags, category,bookId, bookName, author, rating ,image} = book;
   return (
-    <Link to={`BookDetails/${bookId}`}>
+    <Link to={`${bookId}`}>
     
     <div className=" border-2  rounded-lg ">
       <div className="card w-96 bg-base-100 ">

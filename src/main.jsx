@@ -11,6 +11,8 @@ import Homepage from './Component/HomePage/Homepage';
 import BookDetails from './Component/Books/BookDetails';
 import ListedBooks from './Component/ListedBooks/ListedBooks';
 import Pages from './Component/Pages/Pages';
+import ReadBlogs from './Component/ReadBlog/ReadBlogs';
+import WishesBlog from './Component/WishesBlog/WishesBlog';
 
 
 const router = createBrowserRouter([
@@ -24,13 +26,23 @@ const router = createBrowserRouter([
         loader: ()=>fetch('Books.json')
       },
       {
-        path: 'BookDetails/:bookId',
+        path: ':bookId',
         element:<BookDetails></BookDetails>,
-        loader: ({params})=>fetch(`Books.json${params.bookId}`)
+        loader: ({params})=>fetch(`${params.bookId}`)
       },
       {
         path:'/ListedBooks',
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        children:[
+          {
+            index: true,
+            element: <ReadBlogs></ReadBlogs>
+          },
+          {
+            path:'WishesBlog',
+            element: <WishesBlog></WishesBlog>
+          }
+        ]
       },
       {
         path:'/Pages',
