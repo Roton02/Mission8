@@ -16,10 +16,10 @@ const setDataToLs =(book)=>{
     if(!isAxist){
         bookData.push(book);
         localStorage.setItem('books',JSON.stringify(bookData))
-        toast.success('Added this Item ')
+        toast.success('Added Succesfully In your Reading List ')
     }
      else{
-        toast.error('This Item has Already been added')
+        toast.error('You have Already Read this book ! Please try another Book')
      }
 }
 
@@ -41,10 +41,10 @@ const saveDataWishList =(wish)=>{
     if(!isAxist && !isAxistdata){
         bookData.push(wish);
         localStorage.setItem('wish',JSON.stringify(bookData))
-        toast.success('Added this Item ')
+        toast.success('Added Successfully in your WishList')
     }
     else{
-        toast.error('This Item has Already been added')
+        toast.error('You  know this Book Already Added Your WishList !')
      }
 }
 export {getDataToLs,setDataToLs,saveDataWishList,getWishList}

@@ -2,7 +2,7 @@ import { MdOutlineFindInPage } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
 
 const ReadBook = ({books}) => {
-    console.log(books);
+    // console.log(typeof(books.rating));
     return (
         
             <div className="hero lg:border-2 p-0 rounded-lg h-screen lg:h-[400px] ">
