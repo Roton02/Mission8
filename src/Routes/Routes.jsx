@@ -7,6 +7,8 @@ import ReadBlogs from "../Component/ReadBlog/ReadBlogs";
 import WishesBlog from "../Component/WishesBlog/WishesBlog";
 import Pages from "../Component/Pages/Pages";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
+import KidsBooks from "../Component/KidsBook/KidsBooks";
+import Subscribe from "../Component/Subscribe/Subscribe";
 
 
 
@@ -45,6 +47,15 @@ export const router = createBrowserRouter([
         {
           path:'/Pages',
           element: <Pages></Pages>
+        },
+        {
+          path: '/kids',
+          element: <KidsBooks></KidsBooks>,
+          loader: ()=> fetch('Kids.json')
+        },
+        {
+          path: '/subscribe',
+          element: <Subscribe></Subscribe>
         }
       ]
     },

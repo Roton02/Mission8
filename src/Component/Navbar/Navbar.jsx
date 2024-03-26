@@ -31,6 +31,8 @@ const Navbar = () => {
       <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
       <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>s
       <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
+      <NavLink to='/kids' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Kids</NavLink>
+      <NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Try Premium</NavLink>
           </div>
         </div>
         <Link to='/' className="btn btn-ghost text-2xl font-bold">Book Vibe</Link>
@@ -39,6 +41,10 @@ const Navbar = () => {
       <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
       <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>
       <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
+      <div className="pl-7 space-x-2">
+      <NavLink to='/kids' className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white">Kids</NavLink>
+      <NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Try Premium</NavLink>
+      </div>
      
       </div>
       <div className="navbar-end ">

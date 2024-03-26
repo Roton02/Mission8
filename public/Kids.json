@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Cat in the Hat",
+      "author": "Dr. Seuss",
+      "image": "https://images-us.bookshop.org/ingram/9780689711039.jpg?height=500&v=v2",
+      "review": "A delightful tale of mischief and fun that will keep children entertained for hours.",
+      "totalPages": 60,
+      "rating": 4.8,
+      "category": "Magic Book",
+      "tags": ["Adventure", "Rhyming"],
+      "publisher": "Random House",
+      "yearOfPublishing": 1957
+    },
+    {
+      "bookId": 2,
+      "bookName": "Where the Wild Things Are",
+      "author": "Maurice Sendak",
+      "image": "https://images-us.bookshop.org/ingram/9780316570879.jpg?height=500&v=v2-d34ac9da0a93cf49790523903da06b5d",
+      "review": "A captivating story about imagination and the power of dreams.",
+      "totalPages": 48,
+      "rating": 4.6,
+      "category": "Picture Book",
+      "tags": ["Fantasy", "Friendship"],
+      "publisher": "Harper & Row",
+      "yearOfPublishing": 1963
+    },
+    {
+      "bookId": 3,
+      "bookName": "Goodnight Moon",
+      "author": "Margaret Wise Brown",
+      "image": "https://images-us.bookshop.org/ingram/9781481465434.jpg?height=500&v=v2",
+      "review": "A soothing bedtime story that lulls children into a peaceful sleep.",
+      "totalPages": 30,
+      "rating": 4.7,
+      "category": "Cinema Book",
+      "tags": ["Bedtime", "Rituals"],
+      "publisher": "Harper & Brothers",
+      "yearOfPublishing": 1947
+    },
+    {
+      "bookId": 4,
+      "bookName": "Green Eggs and Ham",
+      "author": "Dr. Seuss",
+      "image": "https://images-us.bookshop.org/ingram/9780316343473.jpg?height=500&v=v2",
+      "review": "A whimsical tale with a valuable lesson about trying new things.",
+      "totalPages": 64,
+      "rating": 4.5,
+      "category": "Stroy Book",
+      "tags": ["Humor", "Food"],
+      "publisher": "Random House",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Very Hungry Caterpillar",
+      "author": "Eric Carle",
+      "image": "https://images-us.bookshop.org/ingram/9780399226168.jpg?height=500&v=v2",
+      "review": "A classic story that teaches counting and the life cycle of a butterfly in a fun way.",
+      "totalPages": 26,
+      "rating": 4.9,
+      "category": "booms Book",
+      "tags": ["Education", "Nature"],
+      "publisher": "Philomel Books",
+      "yearOfPublishing": 1969
+    },
+    {
+      "bookId": 6,
+      "bookName": "Curious George",
+      "author": "H.A. Rey",
+      "image": "https://images-us.bookshop.org/ingram/9781524764203.jpg?height=250&v=v2-7026d82a16a62f92e92892c2e41b3802",
+      "review": "Join Curious George on his mischievous adventures full of humor and heart.",
+      "totalPages": 64,
+      "rating": 4.7,
+      "category": "Lion Book",
+      "tags": ["Adventure", "Friendship"],
+      "publisher": "Houghton Mifflin",
+      "yearOfPublishing": 1941
+    }
+  ]
+  
