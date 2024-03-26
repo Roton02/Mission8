@@ -1,22 +1,34 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
+// import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import { saveDataWishList, setDataToLs } from "../../Utility/util";
+
+// import {useParams } from "react-router-dom";
 
 const BookDetails = () => {
-  const data = useParams();
+  const data = useLoaderData()
+  // console.log(data);
+  const param = useParams()
+  // console.log('det', parseInt(param.bookId));
+
+  const finderData = data.find(d => d.bookId == param.bookId)
+  // console.log(finderData);
+
+  // const data = useParams();
   // console.log(data);
   // console.log(data.bookId);
-  const [books, setBooks] = useState([]);
-  // const [details, setDetails]= useState([])
-  useEffect(() => {
-    fetch("/Books.json")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+  // const parsedata = parseInt(data.bookId)
+  // const [books, setBooks] = useState([]);
+  // // const [details, setDetails]= useState([])
+  // useEffect(() => {
+  //   fetch("https://roton02.github.io/JsonData-/Books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setBooks(data));
+  // }, []);
 
-  // console.log(books);
-  // akhane books fecth howa data astece na difult [astece]
-  const finderData = books.find((b) => b.bookId == data.bookId);
-  console.log(finderData.image);
+  // // console.log(books);
+  // const finderData = books.find(book => book.bookId === parsedata)
+  // console.log(finderData);
 
   // console.log(details)
   return (
@@ -64,12 +76,12 @@ const BookDetails = () => {
             </h1>
             <h1>
               {" "}
-              Rating: <span className="ml-24">{finderData.rating} </span>{" "}
+              Rating: <span className="ml-[105px]">{finderData.rating} </span>{" "}
             </h1>
           </div>
           <div className=" flex items-center gap-10 ">
-            <button className="btn bg-gray-200 text-black hover:text-white hover:bg-pink-600 ">Read</button>
-            <button className="btn  bg-gray-200 text-black hover:text-white hover:bg-green-500 ">Wishlist</button>
+            <button onClick={()=>setDataToLs(finderData)} className="btn bg-gray-200 text-black hover:text-white hover:bg-pink-600 ">Read</button>
+            <button onClick={()=>saveDataWishList(finderData)} className="btn  bg-gray-200 text-black hover:text-white hover:bg-green-500 ">Wishlist</button>
             
           </div>
         </div>
