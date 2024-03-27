@@ -1,4 +1,4 @@
-import { GoAlertFill } from "react-icons/go";
+import { FaArrowLeft } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Kidsbook from "./Kidsbook";
 
@@ -15,7 +15,7 @@ const KidsBooks = () => {
     <div className="flex gap-10 items-center ">
     <button className="btn  hover:text-black text-white 
     font-xl bg-pink-600 "> <a href="#kidsBookList">See all Books</a> </button> 
-    <h1 className=" flex gap-2 text-2xl font-bold"><GoAlertFill></GoAlertFill>  Click this and see magic !! </h1>
+    <h1 className=" flex gap-2 text-2xl font-bold"><FaArrowLeft></FaArrowLeft>  Click this and see magic !! </h1>
     </div>
     </div>
   </div>
