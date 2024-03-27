@@ -35,7 +35,7 @@ const Navbar = () => {
       <NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Try Premium</NavLink>
           </div>
         </div>
-        <Link to='/' className="btn btn-ghost text-xl lg:text-3xl font-bold">Read habits</Link>
+        <Link to='/' className="btn btn-ghost text-xl lg:text-3xl font-bold">Read-habits</Link>
       </div>
       <div className="navbar-center hidden space-x-2  lg:flex">
       <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
