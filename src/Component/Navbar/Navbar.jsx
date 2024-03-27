@@ -29,7 +29,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
       <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
-      <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>s
+      <NavLink to='/ListedBooks' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Listed Books</NavLink>
       <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
       <NavLink to='/kids' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Kids</NavLink>
       <NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Try Premium</NavLink>
