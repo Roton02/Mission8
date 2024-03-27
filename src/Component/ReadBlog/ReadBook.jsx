@@ -1,3 +1,4 @@
+import { CiCalendarDate } from "react-icons/ci";
 import PropTypes from 'prop-types';
 import { MdOutlineFindInPage } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
@@ -35,7 +36,7 @@ const ReadBook = ({books}) => {
             ))}
             </div>
             </div>
-            <h1>Year of Publishing : {books.yearOfPublishing}</h1>
+            <h1 className="flex justify-center items-center gap-2"><CiCalendarDate></CiCalendarDate> Year of Publishing : {books.yearOfPublishing}</h1>
           </div>
           <hr />
           <div className="flex justify-center lg:justify-start gap-10">
