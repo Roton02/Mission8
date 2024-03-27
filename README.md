@@ -1,5 +1,5 @@
 */WebSite Name : Read-habits
-*/Live Site url: 
+*/Live Site url: 'https://6603e0ae6f5585736047b478--chic-youtiao-06e2ef.netlify.app/'
 
 */features and characteristics
 1.my website have 5 routes You can take service from any routes you want .

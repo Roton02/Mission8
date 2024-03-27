@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
         {
           path: '/kids',
           element: <KidsBooks></KidsBooks>,
-          loader: ()=> fetch('Kids.json')
+          loader: ()=> fetch('/Kids.json')
         },
         {
           path: '/subscribe',

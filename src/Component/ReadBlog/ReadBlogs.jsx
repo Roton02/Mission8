@@ -22,7 +22,7 @@ const ReadBlogs = () => {
     };
   return (
     <div>
-      <div className="mt-0 mb-5">
+      <div className="-mt-28 mb-5">
       <SortBtn  sortedData={sortedData}></SortBtn>
       </div>
       <div className="flex flex-col space-y-5 mb-5">
