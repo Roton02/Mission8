@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import { getDataToLs } from '../../Utility/util';
 const Pages = () => {
@@ -9,7 +9,6 @@ const Pages = () => {
         console.log(d);
     } 
     console.log(page);
-    const {bookName, totalPages } =page
       const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
       const getPath = (x, y, width, height) => {
@@ -53,3 +52,11 @@ const Pages = () => {
 };
 
 export default Pages;
+
+// Pages.TriangleBar.propTypes={
+//   fill: PropTypes.string,
+//   x: PropTypes.number,
+//   y: PropTypes.number,
+//   width: PropTypes.number,
+//   height: PropTypes.number,
+// }

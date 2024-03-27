@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { CiStar } from "react-icons/ci";
 
 const Kidsbook = ({book}) => {
-    const { tags, category,bookId, bookName, author, rating ,image} = book;
+    const { tags, category, bookName, author, rating ,image} = book;
     return (
       
       
@@ -13,7 +14,7 @@ const Kidsbook = ({book}) => {
     <div className="card-body ml-4 ">
       <div className="flex  gap-10">
       {
-          tags.map(t => <button className="bg-gray-200 p-2 text-[#23BE0A] font-semibold  rounded-lg">{t}</button>)
+          tags.map((t,idx) => <button key={idx} className="bg-gray-200 p-2 text-[#23BE0A] font-semibold  rounded-lg">{t}</button>)
       }
       </div>
       <div>
@@ -31,3 +32,6 @@ const Kidsbook = ({book}) => {
 };
 
 export default Kidsbook;
+Kidsbook.propTypes ={
+  book:PropTypes.object.isRequired
+}

@@ -1,11 +1,11 @@
-
+import PropTypes from 'prop-types';
 import { FaArrowDown } from 'react-icons/fa';
 
 const SortBtn = ({sortedData}) => {
   console.log(sortedData);
     return (
         <div>
-            <div className="flex justify-center mx-auto mb-20 ">
+            <div className="flex justify-center mx-auto mt-4 mb-20 ">
         <details className="dropdown">
           <summary className="m-1  btn bg-green-500 text-white">
             Sort By <FaArrowDown></FaArrowDown>
@@ -28,3 +28,6 @@ const SortBtn = ({sortedData}) => {
 };
 
 export default SortBtn;
+SortBtn.propTypes ={
+  sortedData: PropTypes.func.isRequired
+}

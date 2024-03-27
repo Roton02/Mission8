@@ -168,7 +168,7 @@ const Subscribe = () => {
 				</p>
 			</div>
 		</div>
-		<form novalidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+		<form  className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
 			<label className="block">
 				<span className="mb-1 text-xl">Full name</span>
 				<input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-lg shadow-sm p-2 border-2 bg-gray-50" />
