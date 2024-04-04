@@ -7,6 +7,7 @@ import {
 import { Toaster } from 'react-hot-toast';
 import { router } from './Routes/Routes';
 import React from 'react';
+import AuthContext from './Component/AuthContext/AuthContext';
  
 
 
@@ -15,8 +16,12 @@ import React from 'react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <Toaster></Toaster>
+  
+        <AuthContext>
+        <RouterProvider router={router} />
+         <Toaster></Toaster>
+        </AuthContext>
+   
   </React.StrictMode>,
  
 )

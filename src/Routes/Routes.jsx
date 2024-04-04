@@ -9,6 +9,10 @@ import Pages from "../Component/Pages/Pages";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import KidsBooks from "../Component/KidsBook/KidsBooks";
 import Subscribe from "../Component/Subscribe/Subscribe";
+import SignIn from "../Component/SignIn/SignIn";
+import SignUp from "../Component/SignUp/SignUp";
+import Profile from "../Component/Profile/Profile";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 
 
 
@@ -55,7 +59,19 @@ export const router = createBrowserRouter([
         },
         {
           path: '/subscribe',
-          element: <Subscribe></Subscribe>
+          element:<PrivateRoute> <Subscribe></Subscribe></PrivateRoute>
+        },
+        {
+          path : '/SignIn',
+          element: <SignIn></SignIn>
+        },
+        {
+          path:'/SignUp',
+          element: <SignUp></SignUp>
+        },
+        {
+          path: '/profile',
+          element: <PrivateRoute><Profile></Profile></PrivateRoute>
         }
       ]
     },

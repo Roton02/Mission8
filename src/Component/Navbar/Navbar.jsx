@@ -1,9 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import './navbar.css'
+import { useContext } from "react";
+import { AuthProvider } from "../AuthContext/AuthContext";
 
 
 const Navbar = () => {
-  
+  const { user,signOutPage } = useContext(AuthProvider);
+  // console.log(user);
+  const logOut =()=>{
+    signOutPage()
+    .then(()=>{
+      // console.log('object');
+      
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+  }
   return (
     <nav className="navbar  bg-base-100">
       <div className="navbar-start">
@@ -43,27 +56,43 @@ const Navbar = () => {
       <NavLink to='/Pages' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Pages to Read</NavLink>
       <div className="pl-7 space-x-2">
       <NavLink to='/kids' className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white">Kids</NavLink>
-      <NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Try Premium</NavLink>
+       {
+        user && <><NavLink to='/subscribe' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Dashboard</NavLink>
+        <NavLink to='/profile' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Propile</NavLink></>
+       }
       </div>
      
       </div>
       <div className="navbar-end ">
-      <a
-            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#23BE0A] text-[#23BE0A] text-white"
+        {
+          user ?<Link  to='/SignUp'
+          className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#59C6D2] text-[#59C6D2] hover:text-white"
+        >
+          <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#59C6D2] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+          <button onClick={()=>logOut()} className="relative text-[#59C6D2] transition duration-300 group-hover:text-white ease">
+           LogOuts
+          </button>
+        </Link>: <>
+        <Link to='/SignIn'
+            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#23BE0A] text-[#23BE0A] hover:text-white"
           >
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#23BE0A] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
             <span className="relative text-[#23BE0A] transition duration-300 group-hover:text-white ease">
               Sign In
             </span>
-          </a>
-          <a
-            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#59C6D2] text-[#59C6D2] text-white"
+          </Link>
+           <Link to='/SignUp'
+            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#59C6D2] text-[#59C6D2] hover:text-white"
           >
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#59C6D2] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
             <span className="relative text-[#59C6D2] transition duration-300 group-hover:text-white ease">
               Sign Up
             </span>
-          </a>
+          </Link>
+        </>
+        }
+           
+           
       </div>
     </nav>
   );
